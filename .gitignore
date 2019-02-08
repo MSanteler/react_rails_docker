@@ -1,0 +1,52 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# _______
+# React
+# _______
+
+# dependencies
+frontend/node_modules
+frontend/package-lock.json
+
+# testing
+frontend/coverage
+
+# production
+frontend/build
+
+# misc
+frontend/.DS_Store
+frontend/.idea
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# _______
+# Rails
+# _______
+
+# Ignore bundler config.
+backend/.bundle
+
+# Ignore the default SQLite database.
+backend/db/*.sqlite3
+backend/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+backend/log/*
+backend/tmp/*
+!backend/log/.keep
+!backend/tmp/.keep
+
+# Ignore uploaded files in development
+backend/storage/*
+
+backend/.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+backend/config/master.key
