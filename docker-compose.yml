@@ -3,20 +3,12 @@ services:
   web:
     build:
       context: ./frontend
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
       - /app/node_modules
       - ./frontend:/app
-  # tests:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.dev
-  #   volumes:
-  #     - /app/node_modules
-  #     - .:/app
-  #   command: ["npm", "run", "test"]
 
   database:
     image: mysql:5.7
