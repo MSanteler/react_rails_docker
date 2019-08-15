@@ -31,5 +31,10 @@ module BackendRubyService
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    if ENV["RAILS_LOG_TO_STDOUT"].present?
+      config.logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
+    end
+    config.log_level = ENV.fetch('LOG_LEVEL', :debug)
   end
 end
